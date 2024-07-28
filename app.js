@@ -22,7 +22,7 @@ app.use("/student", studentRoute);
 app.use("/mentor", mentorRoute);
 app.use("/assignmentor", assignmentortostudent);
 
-app.listen(process.env.PORT || 3000, "localhost", async (err) => {
+app.listen(process.env.PORT || 3000, "0.0.0.0", async (err) => {
   await dbConnect();
   console.log("Started server ");
   if (err) {
