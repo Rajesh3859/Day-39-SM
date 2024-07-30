@@ -6,7 +6,7 @@ const bodyparser = require("body-parser");
 const { dbConnect } = require("./database/connection.js");
 const studentRoute = require("./routes/student.js");
 const mentorRoute = require("./routes/mentor.js");
-const assignmentortostudent = require("./routes/assignmentortostudent.js");
+const assignmentor = require("./routes/assignmentor.js");
 
 const app = express();
 
@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 app.use("/student", studentRoute);
 app.use("/mentor", mentorRoute);
-app.use("/assignmentor", assignmentortostudent);
+app.use("/assignmentor", assignmentor);
 
 app.listen(process.env.PORT || 3000, "0.0.0.0", async (err) => {
   await dbConnect();

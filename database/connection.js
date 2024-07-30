@@ -4,7 +4,7 @@ const schema = mongoose.Schema;
 const dbConnect = async () => {
   try {
     await mongoose.connect(
-      "mongodb+srv://rajesh:8gz85sF9JyiAvC@atlascluster.ykkihaw.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster",
+      "mongodb+srv://rajesh:8gz85sF9JyiAvC@atlascluster.ykkihaw.mongodb.net/?retryWrites=true&w=majority&appName=AtlasCluster"
     );
     console.log("DB Connected");
   } catch (e) {
